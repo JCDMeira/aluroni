@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Projeto aluroni feito em base do curso React: lidando com arquivos estáticos da alura
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/JCDMeira/aluroni">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/JCDMeira/aluroni">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/JCDMeira/aluroni">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/JCDMeira/aluroni">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/JCDMeira/aluroni?style=social">  <image alt="GitHub Social"
+  src="https://img.shields.io/github/watchers/JCDMeira/aluroni?style=social"
+  />
+</p>
 
-## Available Scripts
+# Indíce
 
-In the project directory, you can run:
+- [Sobre o projeto](#id01)
+  <!-- - [Detalhes do Curso de javaScrip](#id02) -->
+- [Procedimentos de instalação](#id03)
+- [Meios de contato](#id06)
 
-### `npm start`
+# Sobre o projeto <a name="id01"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Projeto com finalidade de praticar uso de arquivos estáticos.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- <p align="center">
+<img src="./assets/img/site.gif" width="800"  />
+</p> -->
 
-### `npm test`
+<!-- ## Detalhes do Curso de javaScrip <a name="id02"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Curso de JavaScript e TypeScript do básico ao avançado - Atualizado para 2020 - Curso completo sobre todas as nuances do JavaScript na atualidade.
 
-### `npm run build`
+Contempla Javascript moderno (ES6+) para front-end (com Webpack, babel, React, React Hooks e Redux) e back-end (com Node, Express, MySQL / MariaDB e MongoDB) para se tornar um desenvolvedor(a) full stack.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Página do curso](https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/) -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📝 Procedimentos de instalação <a name="id03"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone este repositório usando o comando:
 
-### `npm run eject`
+```bash
+git clone https://github.com/JCDMeira/aluroni.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Instale as dependências com
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# ou
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+yarn i
+```
 
-## Learn More
+# :iphone: Meios de contato <a name="id06"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Jean Carlos De Meira :coffee:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Perfil do linkedin - [Linkedin](https://www.linkedin.com/in/jean-carlos-de-meira-00593816a/)
+
+Perfil do instagram - [Instagram](https://www.instagram.com/jean.meira10/?hl=pt-br)
