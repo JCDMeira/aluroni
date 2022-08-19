@@ -1,29 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node", //node environment
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["./*"]
-    },
-    "experimentalDecorators": true
+    "jsx": "react-jsx"
   },
-
   "include": [
-    "src",
-    "typed-css.d.ts" //configured .d.ts file
+    "src"
   ]
-
 }
