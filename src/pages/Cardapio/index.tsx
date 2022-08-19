@@ -1,5 +1,5 @@
 import styles from "./Cardapio.module.scss";
-import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 const Cardapio: React.FC = () => {
   return (
