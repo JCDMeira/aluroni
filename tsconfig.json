@@ -20,8 +20,10 @@
     },
     "experimentalDecorators": true
   },
+
   "include": [
     "src",
     "typed-css.d.ts" //configured .d.ts file
   ]
+
 }

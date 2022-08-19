@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./Cardapio.module.scss";
+import { ReactComponent as Logo } from "../../assets/images/logo.svg";
+
 
 const Cardapio: React.FC = () => {
   return (
     <main>
       <nav className={styles.menu}>
-        <img src="../../assets/images/logo.svg" alt="logo do aluroni" />
+        <Logo />
       </nav>
     </main>
   );
