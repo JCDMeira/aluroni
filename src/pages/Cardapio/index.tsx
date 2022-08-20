@@ -7,6 +7,7 @@ import FiltersTags from "./FiltersTags";
 
 const Cardapio: React.FC = () => {
   const [searchInput, setSearchInput] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState<number | null>(null);
 
   return (
     <main>
@@ -20,7 +21,10 @@ const Cardapio: React.FC = () => {
         <h3 className={styles.cardapio__titulo}>Cardápio</h3>
         <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
         <div className={styles.cardapio__filtros}>
-          <FiltersTags />
+          <FiltersTags
+            selectedFilter={selectedFilter}
+            setSelectedFilter={setSelectedFilter}
+          />
         </div>
       </section>
     </main>
