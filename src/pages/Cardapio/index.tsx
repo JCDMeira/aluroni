@@ -3,6 +3,7 @@ import styles from "./Cardapio.module.scss";
 import { ReactComponent as Logo } from "assets/images/logo.svg";
 
 import SearchBar from "./SearchBar";
+import FiltersTags from "./FiltersTags";
 
 const Cardapio: React.FC = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -18,6 +19,9 @@ const Cardapio: React.FC = () => {
       <section className={styles.cardapio}>
         <h3 className={styles.cardapio__titulo}>Cardápio</h3>
         <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+        <div className={styles.cardapio__filtros}>
+          <FiltersTags />
+        </div>
       </section>
     </main>
   );
