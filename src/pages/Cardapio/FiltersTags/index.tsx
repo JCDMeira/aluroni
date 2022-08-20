@@ -16,7 +16,10 @@ const FiltersTags: React.FC<FiltersTagsProps> = ({
   setSelectedFilter,
 }) => {
   function selecionarFiltro(option: OptionType) {
-    if (option.id === selectedFilter) setSelectedFilter(null);
+    if (option.id === selectedFilter) {
+      setSelectedFilter(null);
+      return;
+    }
     setSelectedFilter(option.id);
   }
 
