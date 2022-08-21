@@ -1,5 +1,5 @@
-@import "styles/variables.scss";
-@import "styles/breakpoints.scss";
+@import 'styles/variables.scss';
+@import 'styles/breakpoints.scss';
 
 .menu {
   padding: 20px $padding-horizontal;
@@ -16,7 +16,7 @@
 
 .header {
   align-items: center;
-  background-image: url("/assets/images/cardapio/header.png");
+  background-image: url('/assets/images/cardapio/header.png');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

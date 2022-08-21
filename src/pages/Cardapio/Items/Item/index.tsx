@@ -1,7 +1,7 @@
-import React from "react";
-import classNames from "classnames";
-import styles from "./Item.module.scss";
-import MenuItems from "../MenuItems.json";
+import React from 'react';
+import classNames from 'classnames';
+import styles from './Item.module.scss';
+import MenuItems from '../MenuItems.json';
 
 type Props = typeof MenuItems[0];
 
@@ -29,7 +29,7 @@ const Item: React.FC<Props> = (props) => {
           </div>
           <div className={styles.item__porcao}>{size}g</div>
           <div className={styles.item__qtdpessoas}>{`Serve ${serving} ${
-            serving === 1 ? "pessoa" : "pessoas"
+            serving === 1 ? 'pessoa' : 'pessoas'
           }`}</div>
           <div className={styles.item__valor}>R${price.toFixed(2)}</div>
         </div>

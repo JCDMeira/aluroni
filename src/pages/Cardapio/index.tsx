@@ -1,16 +1,16 @@
-import { useState } from "react";
-import styles from "./Cardapio.module.scss";
-import { ReactComponent as Logo } from "assets/images/logo.svg";
+import React, { useState } from 'react';
+import styles from './Cardapio.module.scss';
+import { ReactComponent as Logo } from 'assets/images/logo.svg';
 
-import SearchBar from "./SearchBar";
-import FiltersTags from "./FiltersTags";
-import SortItems from "./SortItems";
-import Items from "./Items";
+import SearchBar from './SearchBar';
+import FiltersTags from './FiltersTags';
+import SortItems from './SortItems';
+import Items from './Items';
 
 const Cardapio: React.FC = () => {
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<number | null>(null);
-  const [canSort, setCanSort] = useState("");
+  const [canSort, setCanSort] = useState('');
 
   return (
     <main>

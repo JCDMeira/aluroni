@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import Item from "./Item";
+import Item from './Item';
 
-import MenuItems from "./MenuItems.json";
-import styles from "./Items.module.scss";
+import MenuItems from './MenuItems.json';
+import styles from './Items.module.scss';
 
 interface ItemProps {
   searchInput: string;
@@ -12,7 +12,7 @@ interface ItemProps {
 }
 
 const onSearch = (title: string, searchInput: string) => {
-  const regex = new RegExp(searchInput, "i");
+  const regex = new RegExp(searchInput, 'i');
   return regex.test(title);
 };
 
@@ -23,11 +23,11 @@ const onFilter = (id: number, selectedFilter: number | null) => {
 
 const onSort = (list: typeof MenuItems, canSort: string) => {
   switch (canSort) {
-    case "porcao":
+    case 'porcao':
       return list.sort((a, b) => (a.size > b.size ? 1 : -1));
-    case "qtd_pessoas":
+    case 'qtd_pessoas':
       return list.sort((a, b) => (a.serving > b.serving ? 1 : -1));
-    case "preco":
+    case 'preco':
       return list.sort((a, b) => (a.price > b.price ? 1 : -1));
     default:
       return list;
@@ -55,9 +55,9 @@ const Items: React.FC<ItemProps> = ({
     MenuItems.filter(
       (item) =>
         onSearch(item.title, searchInput) &&
-        onFilter(item.category.id, selectedFilter)
+        onFilter(item.category.id, selectedFilter),
     ),
-    canSort
+    canSort,
   );
 
   return (

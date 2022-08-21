@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styles from "./SortItems.module.scss";
-import Options from "./ListOfOptions.json";
-import classNames from "classnames";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import React, { useState } from 'react';
+import styles from './SortItems.module.scss';
+import Options from './ListOfOptions.json';
+import classNames from 'classnames';
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
 
 interface SortItemProps {
   canSort: string;
@@ -18,12 +18,12 @@ const SortItems: React.FC<SortItemProps> = ({ canSort, setCanSort }) => {
     <button
       className={classNames({
         [styles.ordenador]: true,
-        [styles["ordenador--ativo"]]: canSort !== "",
+        [styles['ordenador--ativo']]: canSort !== '',
       })}
       onClick={() => setIsOpen(!isOpen)}
       onBlur={() => setIsOpen(false)}
     >
-      <span>{nameSort || "Ordenar por"}</span>
+      <span>{nameSort || 'Ordenar por'}</span>
       {isOpen ? (
         <MdKeyboardArrowUp size={20} />
       ) : (
@@ -32,7 +32,7 @@ const SortItems: React.FC<SortItemProps> = ({ canSort, setCanSort }) => {
       <div
         className={classNames({
           [styles.ordenador__options]: true,
-          [styles["ordenador__options--ativo"]]: isOpen,
+          [styles['ordenador__options--ativo']]: isOpen,
         })}
       >
         {Options.map((option) => (
