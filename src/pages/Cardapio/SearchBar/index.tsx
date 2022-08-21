@@ -16,6 +16,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       <input
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}
+        placeholder="Buscar"
       />
       <CgSearch size={20} color="#4C4D5E" />
     </div>
