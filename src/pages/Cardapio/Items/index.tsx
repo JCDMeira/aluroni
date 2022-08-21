@@ -9,7 +9,7 @@ const Items: React.FC = () => {
   return (
     <div className={styles.itens}>
       {MenuItems.map((menuItem) => (
-        <Item key={menuItem.id} />
+        <Item key={menuItem.id} {...menuItem} />
       ))}
     </div>
   );
