@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "assets/images/logo.svg";
 import SearchBar from "./SearchBar";
 import FiltersTags from "./FiltersTags";
 import SortItems from "./SortItems";
+import Items from "./Items";
 
 const Cardapio: React.FC = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -29,6 +30,7 @@ const Cardapio: React.FC = () => {
           />
           <SortItems canSort={canSort} setCanSort={setCanSort} />
         </div>
+        <Items />
       </section>
     </main>
   );
