@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 
 import Item from "./Item";
 
@@ -11,35 +11,54 @@ interface ItemProps {
   canSort: string;
 }
 
+const onSearch = (title: string, searchInput: string) => {
+  const regex = new RegExp(searchInput, "i");
+  return regex.test(title);
+};
+
+const onFilter = (id: number, selectedFilter: number | null) => {
+  if (selectedFilter !== null) return selectedFilter === id;
+  return true;
+};
+
+const onSort = (list: typeof MenuItems, canSort: string) => {
+  switch (canSort) {
+    case "porcao":
+      return list.sort((a, b) => (a.size > b.size ? 1 : -1));
+    case "qtd_pessoas":
+      return list.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+    case "preco":
+      return list.sort((a, b) => (a.price > b.price ? 1 : -1));
+    default:
+      return list;
+  }
+};
+
 const Items: React.FC<ItemProps> = ({
   searchInput,
   selectedFilter,
   canSort,
 }) => {
-  const [list, setList] = useState(MenuItems);
-  console.log("passei");
-  const onSearch = useCallback(
-    (title: string) => {
-      const regex = new RegExp(searchInput, "i");
-      return regex.test(title);
-    },
-    [searchInput]
-  );
+  //@ estado derivado, não era necessário
+  // const [list, setList] = useState(MenuItems);
 
-  const onFilter = useCallback(
-    (id: number) => {
-      if (selectedFilter !== null) return selectedFilter === id;
-      return true;
-    },
-    [selectedFilter]
-  );
+  // useEffect(() => {
+  //   const newList = MenuItems.filter(
+  //     (item) =>
+  //       onSearch(item.title, searchInput) &&
+  //       onFilter(item.category.id, selectedFilter)
+  //   );
+  //   setList(newList);
+  // }, [searchInput, selectedFilter]);
 
-  useEffect(() => {
-    const newList = MenuItems.filter(
-      (item) => onSearch(item.title) && onFilter(item.category.id)
-    );
-    setList(newList);
-  }, [onFilter, onSearch, searchInput, selectedFilter]);
+  const list = onSort(
+    MenuItems.filter(
+      (item) =>
+        onSearch(item.title, searchInput) &&
+        onFilter(item.category.id, selectedFilter)
+    ),
+    canSort
+  );
 
   return (
     <div className={styles.itens}>
