@@ -30,7 +30,11 @@ const Cardapio: React.FC = () => {
           />
           <SortItems canSort={canSort} setCanSort={setCanSort} />
         </div>
-        <Items />
+        <Items
+          searchInput={searchInput}
+          selectedFilter={selectedFilter}
+          canSort={canSort}
+        />
       </section>
     </main>
   );
