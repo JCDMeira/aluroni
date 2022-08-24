@@ -2,7 +2,7 @@ import React from 'react';
 
 import Item from './Item';
 
-import MenuItems from './MenuItems.json';
+import MenuItems from 'data/MenuItems.json';
 import styles from './Items.module.scss';
 
 interface ItemProps {

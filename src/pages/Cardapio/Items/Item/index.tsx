@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Item.module.scss';
-import MenuItems from '../MenuItems.json';
+import MenuItems from 'data/MenuItems.json';
 
 type Props = typeof MenuItems[0];
 
