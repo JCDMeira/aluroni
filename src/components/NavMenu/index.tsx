@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from 'assets/images/logo.svg';
 import styles from './NavMenu.module.scss';
+import { Link } from 'react-router-dom';
 
 const routes = [
   { label: 'Início', to: '/' },
@@ -15,7 +16,7 @@ const NavMenu: React.FC = () => {
       <ul className={styles.menu__list}>
         {routes.map((route) => (
           <li key={route.label} className={styles.menu__link}>
-            <a href={route.to}>{route.label}</a>
+            <Link to={route.to}>{route.label}</Link>
           </li>
         ))}
       </ul>
