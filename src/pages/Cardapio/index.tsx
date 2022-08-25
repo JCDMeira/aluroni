@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Cardapio.module.scss';
-import { ReactComponent as Logo } from 'assets/images/logo.svg';
 
 import SearchBar from './SearchBar';
 import FiltersTags from './FiltersTags';
 import SortItems from './SortItems';
 import Items from './Items';
+import NavMenu from 'components/NavMenu';
 
 const Cardapio: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -14,9 +14,7 @@ const Cardapio: React.FC = () => {
 
   return (
     <main>
-      <nav className={styles.menu}>
-        <Logo />
-      </nav>
+      <NavMenu />
       <header className={styles.header}>
         <div className={styles.header__text}>A casa do código e da massa</div>
       </header>
