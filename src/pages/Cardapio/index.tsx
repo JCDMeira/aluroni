@@ -5,7 +5,6 @@ import SearchBar from './SearchBar';
 import FiltersTags from './FiltersTags';
 import SortItems from './SortItems';
 import Items from './Items';
-import NavMenu from 'components/NavMenu';
 
 const Cardapio: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -14,7 +13,6 @@ const Cardapio: React.FC = () => {
 
   return (
     <main>
-      <NavMenu />
       <header className={styles.header}>
         <div className={styles.header__text}>A casa do código e da massa</div>
       </header>
