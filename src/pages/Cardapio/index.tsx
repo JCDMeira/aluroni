@@ -12,27 +12,22 @@ const Cardapio: React.FC = () => {
   const [canSort, setCanSort] = useState('');
 
   return (
-    <main>
-      <header className={styles.header}>
-        <div className={styles.header__text}>A casa do código e da massa</div>
-      </header>
-      <section className={styles.cardapio}>
-        <h3 className={styles.cardapio__titulo}>Cardápio</h3>
-        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-        <div className={styles.cardapio__filtros}>
-          <FiltersTags
-            selectedFilter={selectedFilter}
-            setSelectedFilter={setSelectedFilter}
-          />
-          <SortItems canSort={canSort} setCanSort={setCanSort} />
-        </div>
-        <Items
-          searchInput={searchInput}
+    <section className={styles.cardapio}>
+      <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+      <div className={styles.cardapio__filtros}>
+        <FiltersTags
           selectedFilter={selectedFilter}
-          canSort={canSort}
+          setSelectedFilter={setSelectedFilter}
         />
-      </section>
-    </main>
+        <SortItems canSort={canSort} setCanSort={setCanSort} />
+      </div>
+      <Items
+        searchInput={searchInput}
+        selectedFilter={selectedFilter}
+        canSort={canSort}
+      />
+    </section>
   );
 };
 
