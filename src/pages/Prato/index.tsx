@@ -14,26 +14,28 @@ const Prato: React.FC = () => {
 
   const navigate = useNavigate();
 
-  if (!plate) {
-    return <NotFound />;
-  }
-
   return (
-    <PageModel>
-      <button className={styles.voltar} onClick={() => navigate(-1)}>
-        {'< Voltar'}
-      </button>
-      <section className={styles.container}>
-        <h1 className={styles.titulo}>{plate.title}</h1>
-        <div className={styles.imagem}>
-          <img src={plate.photo} alt={plate.title} />
-        </div>
-        <div className={styles.conteudo}>
-          <p className={styles.conteudo__descricao}>{plate.description}</p>
-          <Tags {...plate} />
-        </div>
-      </section>
-    </PageModel>
+    <>
+      {plate ? (
+        <PageModel>
+          <button className={styles.voltar} onClick={() => navigate(-1)}>
+            {'< Voltar'}
+          </button>
+          <section className={styles.container}>
+            <h1 className={styles.titulo}>{plate.title}</h1>
+            <div className={styles.imagem}>
+              <img src={plate.photo} alt={plate.title} />
+            </div>
+            <div className={styles.conteudo}>
+              <p className={styles.conteudo__descricao}>{plate.description}</p>
+              <Tags {...plate} />
+            </div>
+          </section>
+        </PageModel>
+      ) : (
+        <NotFound />
+      )}
+    </>
   );
 };
 
