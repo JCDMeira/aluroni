@@ -5,11 +5,20 @@ import styles from './Home.module.scss';
 import stylesTheme from 'styles/theme.module.scss';
 
 import imageHome from 'assets/images/nossa_casa.png';
+import { useNavigate } from 'react-router-dom';
+
+type plate = typeof MenuItems[0];
 
 const Home: React.FC = () => {
   const recommended = [...MenuItems]
     .sort(() => 0.5 - Math.random())
     .splice(0, 3);
+
+  const navigate = useNavigate();
+
+  const redirectForDetail = (plate: plate) => {
+    navigate(`/prato/${plate.id}`, { state: { ...plate } });
+  };
 
   return (
     <section>
@@ -20,7 +29,12 @@ const Home: React.FC = () => {
             <div className={styles.imagem}>
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recomendado__botao}>Ver mais</button>
+            <button
+              className={styles.recomendado__botao}
+              onClick={() => redirectForDetail(item)}
+            >
+              Ver mais
+            </button>
           </div>
         ))}
       </div>
