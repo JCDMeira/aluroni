@@ -1,10 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
 import styles from './Item.module.scss';
 import { PlateType } from 'types/MenuItemsTypes';
+import Tags from 'components/Tags';
 
 const Item: React.FC<PlateType> = (props) => {
-  const { title, description, category, size, serving, price, photo } = props;
+  const { title, description, photo } = props;
 
   return (
     <div className={styles.item}>
@@ -16,21 +16,7 @@ const Item: React.FC<PlateType> = (props) => {
           <h2> {title} </h2>
           <p> {description}</p>
         </div>
-        <div className={styles.item__tags}>
-          <div
-            className={classNames({
-              [styles.item__tipo]: true,
-              [styles[`item__tipo__${category.label.toLowerCase()}`]]: true,
-            })}
-          >
-            {category.label}
-          </div>
-          <div className={styles.item__porcao}>{size}g</div>
-          <div className={styles.item__qtdpessoas}>{`Serve ${serving} ${
-            serving === 1 ? 'pessoa' : 'pessoas'
-          }`}</div>
-          <div className={styles.item__valor}>R${price.toFixed(2)}</div>
-        </div>
+        <Tags {...props} />
       </div>
     </div>
   );

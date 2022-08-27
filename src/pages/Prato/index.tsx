@@ -1,10 +1,10 @@
-import classNames from 'classnames';
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import MenuItems from 'data/MenuItems.json';
 
 import styles from './Prato.module.scss';
+import Tags from 'components/Tags';
 
 const Prato: React.FC = () => {
   const { id } = useParams();
@@ -28,24 +28,7 @@ const Prato: React.FC = () => {
         </div>
         <div className={styles.conteudo}>
           <p className={styles.conteudo__descricao}>{plate.description}</p>
-          <div className={styles.tags}>
-            <div
-              className={classNames({
-                [styles.tags__tipo]: true,
-                [styles[`tags__tipo__${plate.category.label.toLowerCase()}`]]:
-                  true,
-              })}
-            >
-              {plate.category.label}
-            </div>
-            <div className={styles.tags__porcao}>{plate.size}g</div>
-            <div className={styles.tags__qtdpessoas}>
-              Serve {plate.serving} pessoa {plate.serving == 1 ? '' : 's'}
-            </div>
-            <div className={styles.tags__valor}>
-              R$ {plate.price.toFixed(2)}
-            </div>
-          </div>
+          <Tags {...plate} />
         </div>
       </section>
     </>
