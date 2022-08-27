@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const redirectForDetail = (plate: plate) => {
-    navigate(`/prato/${plate.id}`, { state: { ...plate } });
+    navigate(`/prato/${plate.id}`, { state: { plate } });
   };
 
   return (
