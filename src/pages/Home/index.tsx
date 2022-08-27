@@ -4,6 +4,8 @@ import MenuItems from 'data/MenuItems.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/theme.module.scss';
 
+import imageHome from 'assets/images/nossa_casa.png';
+
 const Home: React.FC = () => {
   const recommended = [...MenuItems]
     .sort(() => 0.5 - Math.random())
@@ -21,6 +23,14 @@ const Home: React.FC = () => {
             <button className={styles.recomendado__botao}>Ver mais</button>
           </div>
         ))}
+      </div>
+
+      <h3 className={stylesTheme.titulo}> Nossa casa </h3>
+      <div className={styles.nossaCasa}>
+        <img src={imageHome} alt="Casa do aluroni" />
+        <div className={styles.nossaCasa__endereco}>
+          Rua Vergueiro, 3185 <br /> <br /> Vila Mariana - SP
+        </div>
       </div>
     </section>
   );
