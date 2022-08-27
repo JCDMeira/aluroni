@@ -6,8 +6,7 @@ import stylesTheme from 'styles/theme.module.scss';
 
 import imageHome from 'assets/images/nossa_casa.png';
 import { useNavigate } from 'react-router-dom';
-
-type plate = typeof MenuItems[0];
+import { PlateType } from 'types/MenuItemsTypes';
 
 const Home: React.FC = () => {
   const recommended = [...MenuItems]
@@ -16,7 +15,7 @@ const Home: React.FC = () => {
 
   const navigate = useNavigate();
 
-  const redirectForDetail = (plate: plate) => {
+  const redirectForDetail = (plate: PlateType) => {
     navigate(`/prato/${plate.id}`, { state: { plate } });
   };
 

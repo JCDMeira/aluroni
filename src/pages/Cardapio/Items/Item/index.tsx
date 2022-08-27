@@ -1,11 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './Item.module.scss';
-import MenuItems from 'data/MenuItems.json';
+import { PlateType } from 'types/MenuItemsTypes';
 
-type Props = typeof MenuItems[0];
-
-const Item: React.FC<Props> = (props) => {
+const Item: React.FC<PlateType> = (props) => {
   const { title, description, category, size, serving, price, photo } = props;
 
   return (

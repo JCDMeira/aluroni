@@ -3,6 +3,7 @@ import React from 'react';
 import Item from './Item';
 
 import MenuItems from 'data/MenuItems.json';
+import { MenuItemsType } from 'types/MenuItemsTypes';
 import styles from './Items.module.scss';
 
 interface ItemProps {
@@ -21,7 +22,7 @@ const onFilter = (id: number, selectedFilter: number | null) => {
   return true;
 };
 
-const onSort = (list: typeof MenuItems, canSort: string) => {
+const onSort = (list: MenuItemsType, canSort: string) => {
   switch (canSort) {
     case 'porcao':
       return list.sort((a, b) => (a.size > b.size ? 1 : -1));

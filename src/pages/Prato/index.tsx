@@ -1,20 +1,20 @@
 import classNames from 'classnames';
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-// import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import MenuItems from 'data/MenuItems.json';
 
 import styles from './Prato.module.scss';
 
 const Prato: React.FC = () => {
-  const { state } = useLocation();
-  const { plate } = state as { plate: typeof MenuItems[0] };
+  const { id } = useParams();
+  const plate = MenuItems.find((item) => item.id === Number(id));
 
   const navigate = useNavigate();
 
-  // const params = useParams();
-  // console.log(params);
+  if (!plate) {
+    return <div></div>;
+  }
 
   return (
     <>
