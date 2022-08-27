@@ -6,6 +6,7 @@ import MenuItems from 'data/MenuItems.json';
 import styles from './Prato.module.scss';
 import Tags from 'components/Tags';
 import NotFound from 'pages/NotFound';
+import PageModel from 'components/PageModel';
 
 const Prato: React.FC = () => {
   const { id } = useParams();
@@ -18,7 +19,7 @@ const Prato: React.FC = () => {
   }
 
   return (
-    <>
+    <PageModel>
       <button className={styles.voltar} onClick={() => navigate(-1)}>
         {'< Voltar'}
       </button>
@@ -32,7 +33,7 @@ const Prato: React.FC = () => {
           <Tags {...plate} />
         </div>
       </section>
-    </>
+    </PageModel>
   );
 };
 
