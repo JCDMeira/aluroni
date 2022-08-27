@@ -5,6 +5,7 @@ import MenuItems from 'data/MenuItems.json';
 
 import styles from './Prato.module.scss';
 import Tags from 'components/Tags';
+import NotFound from 'pages/NotFound';
 
 const Prato: React.FC = () => {
   const { id } = useParams();
@@ -13,7 +14,7 @@ const Prato: React.FC = () => {
   const navigate = useNavigate();
 
   if (!plate) {
-    return <div></div>;
+    return <NotFound />;
   }
 
   return (
