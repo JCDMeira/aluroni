@@ -8,6 +8,7 @@ import Cardapio from 'pages/Cardapio';
 import Home from 'pages/Home';
 import Sobre from 'pages/Sobre';
 import Footer from 'components/Footer';
+import NotFound from 'pages/NotFound';
 
 export default function AppRouter() {
   return (
@@ -20,6 +21,7 @@ export default function AppRouter() {
             <Route path="cardapio" element={<Cardapio />} />
             <Route path="sobre" element={<Sobre />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
