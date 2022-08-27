@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Cardapio.module.scss';
+import stylesTheme from 'styles/theme.module.scss';
 
 import SearchBar from './SearchBar';
 import FiltersTags from './FiltersTags';
@@ -13,7 +14,7 @@ const Cardapio: React.FC = () => {
 
   return (
     <section className={styles.cardapio}>
-      <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+      <h3 className={stylesTheme.titulo}>Cardápio</h3>
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <div className={styles.cardapio__filtros}>
         <FiltersTags
