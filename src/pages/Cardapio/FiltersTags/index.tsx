@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import filters from './filters.json';
 import styles from './Filters.module.scss';
 import classNames from 'classnames';
@@ -41,4 +41,4 @@ const FiltersTags: React.FC<FiltersTagsProps> = ({
   );
 };
 
-export default FiltersTags;
+export default memo(FiltersTags);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import styles from './SortItems.module.scss';
 import Options from './ListOfOptions.json';
 import classNames from 'classnames';
@@ -49,4 +49,4 @@ const SortItems: React.FC<SortItemProps> = ({ canSort, setCanSort }) => {
   );
 };
 
-export default SortItems;
+export default memo(SortItems);
