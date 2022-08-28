@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './Item.module.scss';
 import { PlateType } from 'types/MenuItemsTypes';
 import Tags from 'components/Tags';
@@ -25,4 +25,4 @@ const Item: React.FC<PlateType> = (props) => {
   );
 };
 
-export default Item;
+export default memo(Item);
