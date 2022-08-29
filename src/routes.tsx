@@ -3,14 +3,14 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NavMenu from 'components/NavMenu';
-import PageModel from 'components/PageModel';
 import Footer from 'components/Footer';
-import NotFound from 'pages/NotFound';
-import Prato from 'pages/Prato';
 
 const Cardapio = lazy(() => import('pages/Cardapio'));
 const Home = lazy(() => import('pages/Home'));
 const Sobre = lazy(() => import('pages/Sobre'));
+const PageModel = lazy(() => import('components/PageModel'));
+const NotFound = lazy(() => import('pages/NotFound'));
+const Prato = lazy(() => import('pages/Prato'));
 
 export default function AppRouter() {
   return (
